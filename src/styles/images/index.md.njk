@@ -8,7 +8,58 @@ layout: layout-pane.njk
 
 {% from "_example.njk" import example %}
 
-Avoid unnecessary decoration. Only use images if there’s a real user need.
+Avoid using images for unnecessary decoration. Only use images if there’s a real user need.
+
+This guidance is for government teams that build online services. To learn how to use images in GOV.UK mainstream content, go to [GOV.UK content guidance for images](https://www.gov.uk/guidance/content-design/images).
+
+## Using images to give information
+
+Services usually work best without relying on images. Focus on writing clear, simple content for your service first.
+
+Adding images can sometimes help users better understand instructions. However, images should only be visual aids — written content must contain all the information the user needs to complete the service.
+
+If you choose to add an image to your service, you’ll need to carefully decide if the image needs to be described with alternative text (alt text).
+
+### Alt text
+
+Alternative text, or alt text, is read out by screen readers or displayed if an image does not load or if images have been switched off.
+
+All images should include the alt attribute, even if it’s left empty without alt text (`alt=""`).
+
+#### When to use alt text
+
+Only add alt text when you need to describe visual details that cannot practically be included in the written content.
+
+There are some cases when an empty `alt=""` attribute is more appropriate. These include:
+
+- a decorative image that does not include important content
+- an icon with a text label, where the alt text would repeat the text label
+- an image used in a link, where the image is not needed to understand the link
+
+To decide if an image needs alt text, see the [Web Accessibility Initiative alt decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
+
+#### Writing good alt text
+
+Good alt text:
+
+- tells people what information the image provides
+- describes the content and function of the image
+- is specific, meaningful and concise
+
+Use normal punctuation, like commas and full stops, so the text is easy to read and understand.
+
+Generally, aim for no more than 2 sentences of alt text.
+
+Do not write alt text that:
+
+- includes the name of the photographer or person who created the image
+- starts with ‘Image of’, ‘Graphic of’ or ‘Photo of’
+- repeats information from the page
+- includes extra information not in the image
+
+{{ example({group: "styles", item: "images", example: "alt-text", html: true, open: true, size: "l"}) }}
+
+Avoid images that contain text, especially PNGs and JPGs because the text becomes unreadable when the user zooms in. If the image does contain text, use SVG because it remains readable when the user zooms in. The alt text should be the same as the text displayed in the image.
 
 ## Aspect ratio
 
@@ -24,37 +75,3 @@ The aspect ratio for photographs should be 3:2.
 If your image represents something physical, such as a letter, document or credit card you should use the aspect ratio of that item.
 
 {{ example({group: "styles", item: "images", example: "representative", html: false, open: false, size: "l"}) }}
-
-
-## Alternative text
-
-This guidance is for government teams that build online services. [To learn about publishing alternative text in GOV.UK mainstream content, go to GOV.UK's 'Images' guidance.](https://www.gov.uk/guidance/content-design/images)
-
-Alternative text, or alt text, is read out by screen readers or displayed if an image does not load or if images have been switched off.
-
-All images, except decorative images, must have alt text that:
-
-- tells people what information the image provides
-- describes the content and function of the image
-- is specific, meaningful and concise
-
-Use normal punctuation, like commas and full stops, so the text is easy to read and understand.
-
-Do not:
-
-- include the name of the photographer or person who created the image
-- start with ‘Image of’, ‘Graphic of’ or ‘Photo of’
-- repeat information from the page
-- include extra information not in the image
-
-{{ example({group: "styles", item: "images", example: "alt-text", html: true, open: true, size: "l"}) }}
-
-Some images do not need descriptions. Use `alt=""` if the image is:
-
-- decorative and does not include important content
-- an icon that has a text label that the alt text would repeat
-- used in a link and the image is not needed to understand the link
-
-Use the [Web Accessibility initiative alt decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to work out if the image needs alt text.
-
-Avoid images that contain text, especially PNGs and JPGs because the text becomes unreadable when the user zooms in. If the image does contain text, use SVG because it remains readable when the user zooms in. The alt text should be the same as the text displayed in the image.
