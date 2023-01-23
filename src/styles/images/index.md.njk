@@ -10,7 +10,9 @@ layout: layout-pane.njk
 
 Avoid using images for unnecessary decoration. Only use images if there’s a real user need.
 
-This guidance is for government teams that build online services. To learn how to use images in GOV.UK mainstream content, go to [GOV.UK content guidance for images](https://www.gov.uk/guidance/content-design/images).
+Make sure any information contained in an image can be understood by someone who cannot see it. Also consider partially sighted users with visual impairments and the assistive technologies they might use.
+
+This guidance is for government teams that build online services. To learn how to use images as a GOV.UK content publisher, go to [GOV.UK content guidance for images](https://www.gov.uk/guidance/content-design/images).
 
 ## Using images to give information
 
@@ -20,11 +22,102 @@ Adding images can sometimes help users better understand instructions. However, 
 
 If you choose to add an image to your service, you’ll need to carefully decide if the image needs to be described with alternative text (alt text).
 
-### Alt text
+## Photography
 
-Alternative text, or alt text, is read out by screen readers or displayed onscreen — usually when images do not load or have been disabled in browser settings. All images should include the alt attribute, even if it’s left empty without alt text (`alt=""`).
+Use photography when it’s important to show a lifelike representation of something. For example, showing a photo of a document a user has uploaded.
 
-#### When to use alt text
+Do not use photography to represent abstract concepts, such as to convey an impression or emotion to the user. Avoid using generic stock photography in your service.
+
+## Illustrations
+
+Use illustrations to show a simplified image of something complex. For example:
+- to demonstrate a physical interaction, like scanning a passport
+- to help users find something on a document, like a reference number
+
+### Creating illustrations
+
+Use as few visual elements as possible to communicate your message.
+
+Start by using the [GOV.UK colour palette](/styles/colour/#colour-palette). If you need more colours, try to use tints of the colour palette.
+
+Use flat blocks of colour. Avoid using shadows or gradients, except when needed to show a distinctive feature of an object or to communicate layering or depth.
+
+If creating multiple illustrations for a service, use consistent colours, line widths and border radiuses across them all.
+
+Avoid depicting people in illustrations. If you need to show people, think carefully about how you represent the people that use your service — do not only show one kind of person. 
+For example, only depicting people of a particular age, gender or ethnicity can exclude people, reinforce negative stereotypes and cause harm.
+
+Some examples of illustrations from services:
+
+## Icons
+
+Avoid using icons in most cases. People can understand icons to mean different things, so they can be confusing.
+
+Icons can be more useful in case working systems, where users are familiar with the interface and return to it frequently. In this context, they can help users to scan pages more quickly. In most cases it’s still helpful to include a text label alongside any icons.
+
+Do not use a single icon to represent more than one thing. For example, the search icon (magnifying glass) should only be used for search functionality, and not also for screen magnification.
+
+## Avoid images that contain text
+
+Use written content instead of an image that contains text, wherever possible.
+
+Any text inside an image will be difficult to read, especially for users that need to read text using:
+- screen readers
+- copy and paste
+- highlight
+- resize
+- recolour
+
+However, text can sometimes be an inseparable part of an image, especially in photography. Examples of this might be a photo with a signpost in it, or a company's name on the side of a building.
+
+If you choose to use an image that contains text, you should also include written content nearby that conveys the same meaning. This means the information is available to everyone
+
+Only use alt text as a last resort, when you need to use an image with text that cannot be removed, replaced or supplemented by written content. Be sure to follow the guidance on this page about writing good alt text.
+
+### Avoid images of text
+
+Images of text are usually unnecessary. Where possible, you should replace them with alternatives.
+
+Examples of unnecessary images could include:
+- a post from social media
+- an excerpt from a document
+- a screenshot from a presentation
+
+If you do use an image of text, remember to have written content nearby that conveys the same meaning.
+
+#### Exceptions
+
+There are specific types of images where the exact appearance of the text in the image is essential to its purpose. For example, a logo or a handwritten memo.
+
+These types of images must include alt text, but equivalent written content nearby is not required.
+
+However, you should still try to replace it when possible.
+
+### Possible alternatives
+
+If it's not practical to avoid using an image that contains text (and replace it with written content), there’s a few other ways to replace it.
+
+In any case, make sure that the contrast ratio of text colour and all portions of the image that overlap the text [meets level AA of the Web Content Accessibility Guidelines (WCAG 2.1)](https://www.w3.org/TR/WCAG21/#contrast-minimum).
+
+#### Show HTML text over an image
+
+You could place HTML text so that it shows over the image.
+
+You’ll still need to make sure there is enough contrast, between the text colour and all portions of the image that overlap the text, on all screen sizes.
+
+#### Use a vector graphic image file
+
+You could create the image and text as a vector graphic, such as an SVG file. This ensures that any text stays readable when the user zooms in. Otherwise, text can become pixelated or unreadable.
+
+Remember to follow the guidance on contrast ratios.
+
+## Alt text
+
+Alternative text, or alt text, is read out by screen readers or displayed if an image does not load or if images have been switched off.
+
+All images should include the alt attribute, even if it’s left empty without alt text (`alt=""`).
+
+### When to use alt text
 
 Only add alt text when you need to describe visual details you cannot practically include in the written content.
 
@@ -36,7 +129,7 @@ There are some cases when an empty `alt=""` attribute is more appropriate. These
 
 To decide if an image needs alt text, see the [Web Accessibility Initiative alt decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/).
 
-#### Writing good alt text
+### Writing good alt text
 
 Good alt text:
 
@@ -56,26 +149,3 @@ Do not write alt text that:
 - includes extra information not in the image
 
 {{ example({group: "styles", item: "images", example: "alt-text", html: true, open: true, size: "l"}) }}
-
-### Avoid images that contain text
-
-Use written content instead of an image that contains text, wherever possible.
-
-If you need to use an image that contains text, create it as a vector graphic (SVG) so that it remains readable when the user zooms in. Text can become pixellated or unreadable when zooming into images, especially PNGs and JPGs.
-
-Any important text you display in an image should be included in the written content — or in alt text if this not possible.
-
-## Aspect ratio
-
-### Photography
-
-The aspect ratio for photographs should be 3:2.
-
-{{ example({group: "styles", item: "images", example: "default", html: false, open: false, size: "l"}) }}
-
-
-### Illustrations or representative imagery
-
-If your image represents something physical, such as a letter, document or credit card, you should use the aspect ratio of that item.
-
-{{ example({group: "styles", item: "images", example: "representative", html: false, open: false, size: "l"}) }}
